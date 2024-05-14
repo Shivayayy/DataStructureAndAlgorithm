@@ -1,5 +1,12 @@
 class Solution {
 public:
+    Solution()
+    {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+    }
+
     double numHour(vector<int>&piles ,int k)
     {
         double hours =0;
