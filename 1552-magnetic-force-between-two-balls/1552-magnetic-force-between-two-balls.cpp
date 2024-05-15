@@ -1,5 +1,11 @@
 class Solution {
 public:
+    Solution()
+    {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+    }
     int fun(vector<int>&position,int m ,int k)
     {
         int balls =1;
