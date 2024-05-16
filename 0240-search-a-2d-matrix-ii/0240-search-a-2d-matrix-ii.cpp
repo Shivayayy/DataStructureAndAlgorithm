@@ -1,5 +1,11 @@
 class Solution {
 public:
+    Solution()
+    {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+    }
     bool searchMatrix(vector<vector<int>>& matrix, int target) 
     {
         int n =matrix.size();
