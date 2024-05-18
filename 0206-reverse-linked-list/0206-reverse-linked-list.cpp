@@ -10,25 +10,16 @@
  */
 class Solution {
 public:
-    Solution()
+    ListNode* recur(ListNode* node)
     {
-        ios::sync_with_stdio(false);
-        cin.tie(nullptr);
-        cout.tie(nullptr);
+        if(!node || !node->next)return node;
+        ListNode* front =node->next;
+        ListNode* newHead =recur(node->next);
+        front->next =node;
+        node->next =NULL;
+        return newHead;
     }
-    ListNode* reverseList(ListNode* head) 
-    {
-        if(!head)return head;
-        ListNode* prev =NULL;
-        ListNode* temp =head;
-        while(temp)
-        {
-            ListNode* next =temp->next;
-            temp->next =prev;
-            prev =temp;
-            if(!next)return temp;
-            temp =next;
-        }
-        return temp;
+    ListNode* reverseList(ListNode* head) {
+        return recur(head);
     }
 };
