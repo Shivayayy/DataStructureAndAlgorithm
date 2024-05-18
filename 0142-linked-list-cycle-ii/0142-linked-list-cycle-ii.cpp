@@ -8,6 +8,12 @@
  */
 class Solution {
 public:
+    Solution()
+    {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+    }
     ListNode *detectCycle(ListNode *head) 
     {
       if(!head)return head;
