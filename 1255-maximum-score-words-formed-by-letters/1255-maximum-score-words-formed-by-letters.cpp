@@ -1,5 +1,11 @@
 class Solution {
 public:
+    Solution()
+    {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+    }
     void scorer(vector<string>& words, vector<int>& count, vector<int>& score,int ind,int sum,int &ans)
     {
         if(ind == words.size())
