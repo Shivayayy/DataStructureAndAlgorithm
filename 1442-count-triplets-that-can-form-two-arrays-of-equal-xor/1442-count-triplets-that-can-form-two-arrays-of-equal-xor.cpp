@@ -1,7 +1,14 @@
 class Solution {
 public:
+    Solution()
+    {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+    }
     int countTriplets(vector<int>& arr) 
     {
+        
         int xorer =0;
         unordered_map<int,vector<int>>mp;
         mp[0].push_back(-1);
@@ -17,6 +24,5 @@ public:
             mp[xorer].push_back(i);
         }
         return ans;
-        
     }
 };
